@@ -23,45 +23,30 @@
             height: 80px;
             margin-bottom: 10px;
         }
-        .schedule-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-        .day-card {
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
             background-color: white;
-            border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            width: 300px;
-            padding: 15px;
         }
-        .day-title {
+        .schedule-table th, .schedule-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        .schedule-table th {
             background-color: #003366;
             color: white;
-            padding: 10px;
-            text-align: center;
-            border-radius: 5px;
-            margin-bottom: 15px;
         }
-        .class-entry {
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #eee;
+        .schedule-table tr:nth-child(even) {
+            background-color: #f2f2f2;
         }
-        .class-entry:last-child {
-            border-bottom: none;
-        }
-        .course-name {
+        .time-slot {
             font-weight: bold;
             color: #003366;
         }
-        .class-time {
-            color: #666;
-            font-size: 0.9em;
-        }
-        .class-details {
-            margin-top: 5px;
+        .course-info {
             font-size: 0.9em;
         }
         .footer {
@@ -71,8 +56,9 @@
             font-size: 0.9em;
         }
         @media (max-width: 768px) {
-            .day-card {
-                width: 100%;
+            .schedule-table {
+                display: block;
+                overflow-x: auto;
             }
         }
     </style>
@@ -85,102 +71,120 @@
         <h3>SEMESTER GANJIL TAHUN AKADEMIK 2025/2026</h3>
     </div>
 
-    <div class="schedule-container">
-        <!-- Senin -->
-        <div class="day-card">
-            <div class="day-title">SENIN</div>
-            
-            <div class="class-entry">
-                <div class="course-name">Calculus (2 SKS)</div>
-                <div class="class-time">07:30 - 09:10 (100 menit)</div>
-                <div class="class-details">
-                    Dosen: Endah Budiyati<br>
-                    Ruang: R/704<br>
-                    Email: endahb@ft.untar.ac.id
-                </div>
-            </div>
-        </div>
-
-        <!-- Selasa -->
-        <div class="day-card">
-            <div class="day-title">SELASA</div>
-            
-            <div class="class-entry">
-                <div class="course-name">Technology & Ethics (4 SKS)</div>
-                <div class="class-time">07:30 - 09:10 (Sesi 1)<br>09:30 - 11:10 (Sesi 2)</div>
-                <div class="class-details">
-                    Dosen: Hugeng<br>
-                    Ruang: R/801<br>
-                    Email: hugeng@ft.untar.ac.id
-                </div>
-            </div>
-        </div>
-
-        <!-- Rabu -->
-        <div class="day-card">
-            <div class="day-title">RABU</div>
-            
-            <div class="class-entry">
-                <div class="course-name">Database Systems (4 SKS)</div>
-                <div class="class-time">09:30 - 11:10 (Sesi 1)<br>11:30 - 13:10 (Sesi 2)</div>
-                <div class="class-details">
-                    Dosen: Irvan Lewenusa<br>
-                    Ruang: R/904 (Sesi 1), R/705 (Sesi 2)<br>
-                    Email: irvani@fti.untar.ac.id
-                </div>
-            </div>
-        </div>
-
-        <!-- Kamis -->
-        <div class="day-card">
-            <div class="day-title">KAMIS</div>
-            
-            <div class="class-entry">
-                <div class="course-name">Statistics (2 SKS)</div>
-                <div class="class-time">09:30 - 11:10 (100 menit)</div>
-                <div class="class-details">
-                    Dosen: Dyah Erny Herwindiati<br>
-                    Ruang: R/804<br>
-                    Email: dyahh@fti.untar.ac.id
-                </div>
-            </div>
-            
-            <div class="class-entry">
-                <div class="course-name">Algorithms (4 SKS)</div>
-                <div class="class-time">09:30 - 11:10 (Sesi 1)<br>15:30 - 17:10 (Sesi 2)</div>
-                <div class="class-details">
-                    Dosen: Jeanny Pragantha Novario Jaya Perdana<br>
-                    Ruang: R/704 (Sesi 1), R/902 (Sesi 2)<br>
-                    Email: novariojp@fti.untar.ac.id
-                </div>
-            </div>
-        </div>
-
-        <!-- Jumat -->
-        <div class="day-card">
-            <div class="day-title">JUMAT</div>
-            
-            <div class="class-entry">
-                <div class="course-name">Fundamental Programming (4 SKS)</div>
-                <div class="class-time">07:30 - 09:10 (Sesi 1)<br>09:30 - 11:10 (Sesi 2)</div>
-                <div class="class-details">
-                    Dosen: Darius Andana Haris<br>
-                    Ruang: Lab. Programming 6 (lt. 9)<br>
-                    Email: dariush@fti.untar.ac.id
-                </div>
-            </div>
-            
-            <div class="class-entry">
-                <div class="course-name">Algorithms (4 SKS)</div>
-                <div class="class-time">13:30 - 15:10 (Sesi 1)<br>15:30 - 17:10 (Sesi 2)</div>
-                <div class="class-details">
-                    Dosen: Jeanny Pragantha Novario Jaya Perdana<br>
-                    Ruang: R/704<br>
-                    Email: novariojp@fti.untar.ac.id
-                </div>
-            </div>
-        </div>
-    </div>
+    <table class="schedule-table">
+        <thead>
+            <tr>
+                <th>Hari</th>
+                <th>07:30 – 09:10</th>
+                <th>09:30 – 11:10</th>
+                <th>11:30 – 13:10</th>
+                <th>13:30 – 15:10</th>
+                <th>15:30 – 17:10</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Senin</td>
+                <td>
+                    <div class="course-info">
+                        Calculus<br>
+                        Dosen: Endah Budiyati<br>
+                        Ruang: R/704
+                    </div>
+                </td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Selasa</td>
+                <td>
+                    <div class="course-info">
+                        Technology & Ethics<br>
+                        Dosen: Hugeng<br>
+                        Ruang: R/801
+                    </div>
+                </td>
+                <td>
+                    <div class="course-info">
+                        Technology & Ethics<br>
+                        Dosen: Hugeng<br>
+                        Ruang: R/801
+                    </div>
+                </td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Rabu</td>
+                <td>-</td>
+                <td>
+                    <div class="course-info">
+                        Database Systems<br>
+                        Dosen: Irvan Lewenusa<br>
+                        Ruang: R/904
+                    </div>
+                </td>
+                <td>
+                    <div class="course-info">
+                        Database Systems<br>
+                        Dosen: Irvan Lewenusa<br>
+                        Ruang: R/904
+                    </div>
+                </td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Kamis</td>
+                <td>-</td>
+                <td>
+                    <div class="course-info">
+                        Statistics<br>
+                        Dosen: Dyah Erny<br>
+                        Ruang: R/804
+                    </div>
+                </td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Jumat</td>
+                <td>
+                    <div class="course-info">
+                        Fundamental Programming<br>
+                        Dosen: Darius Andana<br>
+                        Ruang: Lab. Programming 6 (Lt. 9)
+                    </div>
+                </td>
+                <td>
+                    <div class="course-info">
+                        Fundamental Programming<br>
+                        Dosen: Darius Andana<br>
+                        Ruang: Lab. Programming 6 (Lt. 9)
+                    </div>
+                </td>
+                <td>-</td>
+                <td>
+                    <div class="course-info">
+                        Algorithms<br>
+                        Dosen: Jeanny & Novario<br>
+                        Ruang: R/704
+                    </div>
+                </td>
+                <td>
+                    <div class="course-info">
+                        Algorithms<br>
+                        Dosen: Jeanny & Novario<br>
+                        Ruang: R/704
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
     <div class="footer">
         <p>FAKULTAS TEKNOLOGI INFORMASI - UNIVERSITAS TARUMANAGARA</p>
